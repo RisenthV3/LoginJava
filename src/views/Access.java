@@ -101,7 +101,33 @@ public class Access extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        JOptionPane.showMessageDialog(this, "Esto cerrará el sistema", "Salir de la app.", JOptionPane.QUESTION_MESSAGE);
+        
+        //String userName = this.txtUser.getText();
+        
+        //String userPass = String.valueOf(this.txtPassword.getPassword());
+        //Recuerda asignar password como barra de Password
+        //Esto cambia la manera de obtenerlo
+        
+        String UserI = txtUser.getText();
+        
+        String PassI = txtPassword.getText();
+        //Reemplazar sea el caso
+        
+        String UserV = "Usuario";
+        
+        String PassV = "Password";
+        
+        if((UserI.equals(UserV)) && (PassI.equals(PassV))){
+            
+            JOptionPane.showMessageDialog(this, "Acceso Correcto", "Datos validados", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+        else{
+            
+            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos", "Intententelo de nuevo", HEIGHT);
+            //Investigar tipos de cuadro de mensaje.
+            
+        }
     }//GEN-LAST:event_btnAcceptActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
