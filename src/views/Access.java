@@ -110,8 +110,8 @@ public class Access extends javax.swing.JFrame {
         
         String UserI = txtUser.getText();
         
-        String PassI = txtPassword.getText();
-        //Reemplazar sea el caso
+        String PassI = String.valueOf(this.txtPassword.getPassword());
+        //Reemplazado, original = txtPassword.getText();
         
         String UserV = "Usuario";
         
@@ -124,10 +124,11 @@ public class Access extends javax.swing.JFrame {
         }
         else{
             
-            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos", "Intententelo de nuevo", HEIGHT);
+            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos", "Intententelo de nuevo", JOptionPane.ERROR_MESSAGE);
             //Investigar tipos de cuadro de mensaje.
             
         }
+        
     }//GEN-LAST:event_btnAcceptActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
